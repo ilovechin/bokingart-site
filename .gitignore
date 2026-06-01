@@ -1,0 +1,7 @@
+.netlify/
+.netlify-dist/
+*.log
+gh-auth.log
+preview-*.png
+netlify-anonymous-deploy.json
+Thumbs.db

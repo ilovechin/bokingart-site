@@ -893,10 +893,67 @@ details p {
   color: rgba(255, 255, 255, 0.74);
 }
 
+.contact-channel-label {
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.inquiry-copy .contact-channel-label,
+.inquiry-mini .contact-channel-label {
+  color: var(--gold);
+}
+
+.contact-channel {
+  display: grid;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.contact-channel p:last-child {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .email-link {
   width: fit-content;
   color: var(--crystal);
   border-bottom: 1px solid currentColor;
+}
+
+.wechat-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 170px;
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.wechat-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.wechat-copy h3,
+.wechat-inline h3 {
+  font-size: 1.08rem;
+  line-height: 1.2;
+}
+
+.wechat-card img,
+.wechat-inline img {
+  width: 100%;
+  aspect-ratio: 7 / 10;
+  object-fit: contain;
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
 }
 
 .inquiry-form {
@@ -1087,7 +1144,7 @@ textarea {
 }
 
 .sub-hero::before {
-  background: var(--hero-image) center / cover;
+  background: var(--hero-image) var(--hero-position, center) / cover;
   transform: scale(1.04);
   filter: saturate(0.96) contrast(1.04);
   animation: slow-drift 16s ease-out both;
@@ -1323,6 +1380,36 @@ textarea {
   color: rgba(18, 20, 22, 0.7);
 }
 
+.inquiry-mini-actions {
+  width: min(900px, 100%);
+  display: grid;
+  gap: 18px;
+  justify-items: center;
+}
+
+.wechat-inline {
+  width: min(760px, 100%);
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  gap: 18px;
+  align-items: center;
+  padding: 18px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(18, 20, 22, 0.08);
+  border-radius: 6px;
+  box-shadow: 0 16px 42px rgba(18, 20, 22, 0.08);
+}
+
+.wechat-inline div {
+  display: grid;
+  gap: 8px;
+}
+
+.wechat-inline p {
+  max-width: none;
+}
+
 .seo-section {
   background: var(--paper);
 }
@@ -1535,6 +1622,17 @@ textarea {
     grid-template-columns: 1fr;
   }
 
+  .wechat-card,
+  .wechat-inline {
+    grid-template-columns: 1fr;
+  }
+
+  .wechat-card img,
+  .wechat-inline img {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
   .site-footer {
     display: grid;
   }
@@ -1581,6 +1679,11 @@ textarea {
   .collection-card div,
   .inquiry-form {
     padding: 18px;
+  }
+
+  .wechat-card,
+  .wechat-inline {
+    padding: 16px;
   }
 
   .facts {

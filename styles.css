@@ -901,8 +901,8 @@ details p {
   color: var(--gold);
 }
 
-.inquiry-copy .contact-channel-label,
-.inquiry-mini .contact-channel-label {
+.inquiry-copy p.contact-channel-label,
+.inquiry-mini p.contact-channel-label {
   color: var(--gold);
 }
 
